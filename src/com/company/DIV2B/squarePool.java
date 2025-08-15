@@ -16,6 +16,18 @@ public class squarePool {
                     arr[i][j] = sc.nextInt();
                 }
             }
+
+
+            int count = 0;
+            for(int i = 0 ; i< n; i++){
+                int dx = arr[i][0];
+                int dy = arr[i][1];
+                int x = arr[i][2];
+                int y = arr[i][3];
+                if((x+y == s && dy != dx) || (x == y && dy == dx)) count++;
+            }
+
+            System.out.println(count);
         }
     }
 }
